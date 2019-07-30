@@ -1,0 +1,61 @@
+ <!DOCTYPE html>
+ <html>
+ <head>
+ 	<meta charset="utf-8">
+ 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+ 	<title>Belajar Vue</title>
+ 	<link rel="stylesheet" href="">
+ 	<script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>
+ </head>
+ <body>
+ 	<div id="app">
+ 		<h1>{{ message }}</h1>
+ 		<!-- <p>{{ teks }} {{ nama }}, Selamat datang di Kelas {{ kelas }}</p> -->
+ 	</div>
+ 	<script type="text/javascript">
+ 		var vm = new Vue({
+ 			el : '#app',
+ 			 data: {
+ 			 	message: 'Hello world!',
+				name: 'Hafid', // string
+				age: 33, // integer
+				gender: true, // boolean (Pria)
+				hobby: ['coding','sleeping'], // array
+				children: {
+					1: 'Ammar',
+					2: 'Faqih',
+					3: 'Syamil'
+				}
+ 			},
+
+ 			//hook created & beforeCreate
+ 			// beforeCreate(){
+ 			// 	console.log('Before Create: ' + 'message = ' + this.message)
+ 			// },
+ 			// created(){
+ 			// 	console.log('created ' + 'message ' + this.message)
+ 			// 	console.log(this.$data)
+ 			// }
+ 			// 
+ 			// Mounted & beforeMount
+ 			// beforeMount(){
+ 			// 	console.log("Before Mount : " + 'el = ' +this.$el.textContent)
+ 			// },
+ 			// mounted(){
+ 			// 	console.log("Mounted : " + 'el = ' + this.$el.textContent)
+ 			// }
+ 			// 
+ 			// updated & beforeUpdate
+ 			beforeUpdate(){
+ 				console.log('before Update: ' + ' el ' + this.$el.textContent)
+ 			},
+ 			updated(){
+ 				console.log('updated : ' + ' el ' + this.$el.textContent)
+ 			}
+ 		})
+ 		// vm.message = "tahu"
+ 		this.$data
+ 		vm.$data
+ 	</script>
+ </body>
+ </html>

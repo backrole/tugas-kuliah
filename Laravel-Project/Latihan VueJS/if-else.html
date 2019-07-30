@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title></title>
+	<link rel="stylesheet" href="">
+	<script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>
+</head>
+<body>
+	<div id="app">
+		<button v-on:click="counter += 1">
+			Counter
+		</button>
+		<p>Button di atas telah diklik sebanyak {{ counter }} kali.</p>
+		<button v-on:click="info('selamat datang')">
+ Informasi
+</button>
+<a href="http://vuejs.org" v-on:click="link($event)">
+ Vuejs.org
+</a>
+<button v-on:click.once="info('selamat datang')">
+ Informasi
+</button>
+
+	</div>
+	<script>
+		var example1 = new Vue({
+			el: '#app',
+			data: {
+				counter: 0
+			},
+			methods: {
+				 info (text) {
+						alert(text)
+					},
+					link(){
+						alert("Buka?")
+						event.preventDefatult
+					}
+			 }
+
+		})
+	</script>
+
+	
+</body>
+</html>
