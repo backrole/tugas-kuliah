@@ -74,16 +74,23 @@
                     <?php
                     if(get_theme_mod( 'header_banner_tagline_setting' )){
                         echo get_theme_mod( 'header_banner_tagline_setting' );
-                }else{
+                    }else{
                         echo esc_html__('To customize the contents of this header banner and other elements of your site, go to Dashboard > Appearance > Customize','wp-bootstrap-starter');
                     }
                     ?>
                 </p>
                 <a href="#content" class="page-scroller"><i class="fa fa-fw fa-angle-down"></i></a>
+
+                <div class="row">
+                    <h1 class="col-md-4 kolom-4 bg-info">1</h1>
+                    <h1 class="col-md-8 bg-dark">2</h1>
+                </div>
             </div>
+
         </div>
     <?php endif; ?>
 	<div id="content" class="site-content">
 		<div class="container">
 			<div class="row">
                 <?php endif; ?>
+                
